@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Css/all.min.css" />
     <link rel="stylesheet" href="Css/normalize.css" />
     <link rel="stylesheet" href="Css/main.css" />
+    <link rel="stylesheet" href="Css/main-rtl.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,11 +18,6 @@
     <link rel="shortcut icon" href="Images/logo.png" />
   </head>
   <body>
-    <div class="pre-load">
-      <div class="holder">
-        <img src="Images/sandglass.png" alt="">
-      </div>
-    </div>
     <!-- Start Header -->
     <header id="home">
       <div class="over-lay"></div>
@@ -33,17 +29,17 @@
           <nav>
             <ul>
               <li id="home">
-                <a href="#home" class="active" data-order="0">Home</a>
+                <a href="#home" class="active" data-order="0">الرئيسية</a>
               </li>
               <li id="services">
-                <a href="#services" data-order="1">Services</a>
+                <a href="#services" data-order="1">الخدمات</a>
               </li>
-              <li id="skills"><a href="#skills" data-order="2">Skills</a></li>
+              <li id="skills"><a href="#skills" data-order="2">المهارات</a></li>
               <li id="portfolio">
-                <a href="#portfolio" data-order="3">Portfolio</a>
+                <a href="#portfolio" data-order="3">معرض الأعمال</a>
               </li>
               <li id="contact">
-                <a href="#contact" data-order="4">Contact Me</a>
+                <a href="#contact" data-order="4">لتواصل</a>
               </li>
             </ul>
           </nav>
@@ -55,7 +51,7 @@
           <div class="logo"><img src="Images/logo.png" alt="" /></div>
         </div>
         <div class="inrtoduction-text">
-          <span class="full-name">Mustapha Boulanfad</span>
+          <span class="full-name">مصطفى بولانفاض</span>
           <p class="changing-text"></p>
         </div>
         <div class="scroll">
@@ -65,9 +61,9 @@
         </div>
         <div class="parameters">
           <span class="show-parameters"><i class="fas fa-cog"></i></span>
-          <h3>Style Swetcher</h3>
+          <h3>إعدادات</h3>
           <hr />
-          <h4>Theme Color</h4>
+          <h4>اللون الرئيسي</h4>
           <div class="colors">
             <span data-color="#f14734"></span>
             <span data-color="#1c7947"></span>
@@ -79,35 +75,34 @@
             <span data-color="#c56824"></span>
           </div>
           <hr />
-          <h4>Theme Style</h4>
+          <h4>لون الخلفية</h4>
           <div class="style">
-            <button class="mode light" id="light">light</button>
-            <button class="mode dark" id="dark">dark</button>
+            <button class="mode light" id="light">طبيعي</button>
+            <button class="mode dark" id="dark">مظلم</button>
           </div>
           <hr />
-          <h4>Layout</h4>
+          <h4>وضع العرض</h4>
           <div class="style">
-            <button class="layout wide" id="wide">Wide</button>
-            <button class="layout boxed" id="boxed">Boxed</button>
+            <button class="layout wide" id="wide">كامل</button>
+            <button class="layout boxed" id="boxed">مجموع</button>
           </div>
           <hr />
-          <h4>Language</h4>
+          <h4>اللغة</h4>
           <div class="style">
-           <select name="language" id="language" class="language">
-             <option value="EN">English</option>
-             <option value="AR">عربية</option>
-           </select>
+            <select name="language" id="language" class="language">
+              <option value="EN">English</option>
+              <option value="AR">عربية</option>
+            </select>
           </div>
         </div>
-      </div>
         <div class="cookies">
           <i class="fas fa-times close"></i>
           <p>
-            We use cookies to ensure you have the best browsing experience on
-            our website. By using our site, you acknowledge that you have read
-            and understood our Cookie Policy & Privacy Policy
+            نحن نستخدم ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة تصفح على
+            موقعنا. باستخدام موقعنا ، فإنك تقر بأنك قد قرأت وفهم سياسة ملفات
+            تعريف الارتباط وسياسة الخصوصية الخاصة بنا
           </p>
-          <button class="accept">Got It!</button>
+          <button class="accept">حسنا!</button>
         </div>
       </div>
     </header>
@@ -116,8 +111,8 @@
     <section id="services" class="services">
       <div class="container">
         <div class="special-heading">
-          <h1 class="title">Services</h1>
-          <p>Services adapted to your needs</p>
+          <h1 class="title">خدمات</h1>
+          <p>الخدمات تتكيف مع احتياجاتك</p>
         </div>
         <div class="services-container">
           <div class="service">
@@ -126,8 +121,8 @@
                 <i class="fas fa-globe-europe"></i>
               </div>
               <div class="info">
-                <h3>Creation Site Web</h3>
-                <p>Showcase, corporate, events site, e-commerce, intranet</p>
+                <h3>إنشاء موقع ويب</h3>
+                <p>عرض ، شركة ، موقع أحداث ، تجارة إلكترونية ، شبكة إنترانت</p>
               </div>
             </div>
             <div class="box">
@@ -135,10 +130,9 @@
                 <i class="far fa-lightbulb"></i>
               </div>
               <div class="info">
-                <h3>NATURAL REFERENCE</h3>
+                <h3>مرجعية طبيعية</h3>
                 <p>
-                  Semantic display of information, clean pages for optimal
-                  referencing.
+                  العرض الدلالي للمعلومات وصفحات نظيفة للحصول على أفضل المراجع.
                 </p>
               </div>
             </div>
@@ -152,10 +146,8 @@
                 <i class="fas fa-expand-arrows-alt"></i>
               </div>
               <div class="info">
-                <h3>PAGES DYNAMISM</h3>
-                <p>
-                  Non-intrusive content animations to embellish your project
-                </p>
+                <h3>دينامية الصفحات</h3>
+                <p>رسوم متحركة للمحتوى غير تدخلية لتجميل مشروعك</p>
               </div>
             </div>
             <div class="box">
@@ -163,8 +155,8 @@
                 <i class="fas fa-pencil-ruler"></i>
               </div>
               <div class="info">
-                <h3>RESPONSIVE DESIGN</h3>
-                <p>Compatible with all media, tablet & mobile application.</p>
+                <h3>صفحات متجاوبة</h3>
+                <p>متوافقة مع جميع الوسائط والتابلت وتطبيقات الهاتف المحمول.</p>
               </div>
             </div>
           </div>
@@ -179,8 +171,8 @@
       </div>
       <div class="over-lay"></div>
       <div class="content">
-        <q>Simplicity is the soul of efficiency.</q>
-        <span>Austin Freeman</span>
+        <q>البساطة هي روح الكفاءة.</q>
+        <span><bdi>Austin Freeman</bdi></span>
       </div>
     </div>
 
@@ -188,32 +180,28 @@
     <section class="skills" id="skills">
       <div class="container">
         <div class="special-heading">
-          <h1 class="title">Skills</h1>
-          <p>Our skills to achieve your wishs</p>
+          <h1 class="title">مهارات</h1>
+          <p>مهاراتنا من أجل تحقيق رغباتك</p>
         </div>
         <div class="skills-container">
           <div class="domain">
-            <h1 class="title">Domain's Skills</h1>
+            <h1 class="title">مهارات المجال</h1>
             <div class="box">
-              <h3><i class="far fa-check-square"></i>CREATION SITE WEB</h3>
-              <p>Showcase, corporate, events site, e-commerce, intranet.</p>
+              <h3><i class="far fa-check-square"></i>إنشاء موقع ويب</h3>
+              <p>عرض ، شركة ، موقع أحداث ، تجارة إلكترونية ، شبكة إنترانت</p>
             </div>
             <div class="box">
-              <h3><i class="far fa-check-square"></i>PAGES DYNAMISMs</h3>
-              <p>Make dynamic pages using JavaScript.</p>
+              <h3><i class="far fa-check-square"></i>مرجعية طبيعية</h3>
+              <p>أنشاء صفحات ديناميكية باستخدام <bdi>JavaScript</bdi></p>
             </div>
             <div class="box">
-              <h3><i class="far fa-check-square"></i>MULTI-PLATFORM DESIGN</h3>
-              <p>Compatible with all media, tablet & mobile application</p>
-            </div>
-            <div class="box">
-              <h3><i class="far fa-check-square"></i>CREATION SITE WEB</h3>
-              <p>Showcase, corporate, events site, e-commerce, intranet</p>
+              <h3><i class="far fa-check-square"></i>تصميم متعدد المنصات</h3>
+              <p>متوافق مع جميع الوسائط والتابلت وتطبيقات الهاتف المحمول</p>
             </div>
           </div>
           <div class="dev-skills">
             <div class="dev">
-              <h1 class="title">Development Skills</h1>
+              <h1 class="title">مهارات برمجية</h1>
               <div class="skill">
                 <div class="percent" data-percent="70">
                   <div class="name">html - css</div>
@@ -238,8 +226,8 @@
       </div>
       <div class="over-lay"></div>
       <div class="content">
-        <q>Make it work, make it right, make it fast.</q>
-        <span>Kent Beck</span>
+        <q>اجعلها تعمل ، اجعلها صحيحة ، اجعلها سريعة.</q>
+        <span><bdi>Kent Beck</bdi></span>
       </div>
     </div>
 
@@ -247,17 +235,17 @@
     <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="special-heading">
-          <h1 class="title">Portfolio</h1>
-          <p>Some of the projects I worked on</p>
+          <h1 class="title">معرض الأعمال</h1>
+          <p>بعض المشاريع التي عملت عليها</p>
         </div>
         <div class="filter-button">
-          <span id="all-project" class="active">All Projects</span>
-          <span id="dev-project">Web Development</span>
-          <span id="design-project">Graphic Design</span>
+          <span id="all-project" class="active">كل المشاريع</span>
+          <span id="dev-project">برمجة الويب</span>
+          <span id="design-project">تصميم غرافيك</span>
         </div>
         <div class="projects">
           <i class="fas fa-cogs"></i>
-          <p>We still working to fill this part.</p>
+          <p>ما زلنا نعمل لملء هذا الجزء.</p>
         </div>
       </div>
     </section>
@@ -269,46 +257,50 @@
       </div>
       <div class="over-lay"></div>
       <div class="content">
-        <q>Knowledge is power.</q>
-        <span>Francis Bacon</span>
+        <q>المعرفة قوة.</q>
+        <span><bdi>Francis Bacon</bdi></span>
       </div>
     </div>
     <!-- Start Contact -->
     <section class="contact" id="#contact">
       <div class="container">
         <div class="special-heading">
-          <h1 class="title">Contact Me</h1>
-          <p>Glad to receive your messages.</p>
+          <h1 class="title">تواصل معي</h1>
+          <p>سعيد لتلقي رسائلك.</p>
         </div>
         <div class="content">
           <div class="info">
             <div class="box">
-              <h3><i class="fas fa-phone-alt"></i>Phone number</h3>
-              <p>(+212)7 72.67.12.22</p>
+              <h3><i class="fas fa-phone-alt"></i>الهاتف</h3>
+              <p><bdi>(+212)7 72.67.12.22</bdi></p>
             </div>
             <div class="box">
-              <h3><i class="fas fa-envelope"></i>Email</h3>
+              <h3><i class="fas fa-envelope"></i>البريد الإلكتروني</h3>
               <p>boulanfad.m01@gmail.com</p>
             </div>
             <div class="box">
-              <h3><i class="far fa-calendar-alt"></i>work time</h3>
-              <p>All time is yours.</p>
+              <h3><i class="far fa-calendar-alt"></i>أوقات العمل</h3>
+              <p>كل الوقت لك.</p>
             </div>
           </div>
           <div class="send-message">
             <form action="">
               <div>
-                <input type="text" name="name" placeholder="Full Name" />
+                <input type="text" name="name" placeholder="الإسم الكامل" />
                 <i class="fas fa-user-alt"></i>
                 <span>*</span>
               </div>
               <div>
-                <input type="email" name="email" placeholder="Email" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="البريد اللإلكتروني"
+                />
                 <i class="fas fa-envelope"></i>
                 <span>*</span>
               </div>
               <div>
-                <input type="number" name="phone" placeholder="Phone Number" />
+                <input type="number" name="phone" placeholder="رقم الهاتف" />
                 <i class="fas fa-phone-alt"></i>
               </div>
               <div>
@@ -316,7 +308,7 @@
                   name="message"
                   id="message"
                   cols="30"
-                  placeholder="Message"
+                  placeholder="الرسالة"
                   rows="10"
                 ></textarea>
                 <span>*</span>
@@ -326,12 +318,12 @@
                   <input type="checkbox" name="check" id="accept" />
                 </div>
                 <label for="accept"
-                  >By submitting this form, I accept that the information
-                  entered will be used as part of the contact request and the
-                  commercial relationship that may result from it.</label
+                  >بإرسال هذا النموذج ، أوافق على هذه المعلومات سيتم استخدامه
+                  كجزء من طلب الاتصال و العلاقة التجارية التي قد تنجم
+                  عنها.</label
                 >
               </div>
-              <input type="submit" value="Send" class="send" id="send" />
+              <input type="submit" value="إرسال" class="send" id="send" />
             </form>
           </div>
         </div>
@@ -366,28 +358,31 @@
         <div class="container">
           <div class="content-container">
             <div class="desc">
-              <h2>INDEPENDENT IT DEVELOPER</h2>
+              <h2>مطور ويب حر</h2>
               <p>
-                Front & freelance web developer, I am at your disposal to answer
-                any type of website creation, specific development, or web
-                application projects.
+                مطور الواجهة والويب ، أنا تحت تصرفك للإجابة على أي نوع من إنشاء
+                مواقع الويب أو التطوير المحدد أو مشاريع تطبيقات الويب.
               </p>
               <p>
-                Passionate about web-related technologies, I put my skills at
-                the service of your needs in various fields.
+                شغوفًا بالتقنيات المتعلقة بالويب ، أضع مهاراتي في خدمة احتياجاتك
+                في مختلف المجالات.
               </p>
             </div>
             <div class="info">
-              <h2>Mustapha Boulanfad</h2>
-              <span><i class="fas fa-phone-alt"></i>(+212)7 72.67.12.22</span>
+              <h2>مصطفى بولانفاض</h2>
               <span
-                ><i class="fas fa-envelope"></i>boulanfad.m01@gmail.com</span
+                ><i class="fas fa-phone-alt"></i>
+                <bdi>(+212)7 72.67.12.22</bdi></span
+              >
+              <span
+                ><i class="fas fa-envelope"></i
+                ><bdi>boulanfad.m01@gmail.com</bdi></span
               >
             </div>
           </div>
         </div>
       </section>
-      <section class="footer">COPYRIGHT © 2021</section>
+      <section class="footer">جميع الحقوق محفوظة © 2021</section>
     </footer>
 
     <script type="text/javascript" src="Js/main.js"></script>

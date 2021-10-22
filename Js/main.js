@@ -15,7 +15,9 @@ let show_navBar = document.querySelector(".show-navBar"),
     ".break-section .background img"
   ),
   navbar_items = Array.from(document.querySelectorAll("nav a")),
-  mode_buttons = Array.from(document.querySelectorAll(".mode"));
+  mode_buttons = Array.from(document.querySelectorAll(".mode")),
+  select_language = document.querySelector(".language"),
+  pre_load = document.querySelector(".pre-load");
 
 // Scroll To section from NavBar
 navbar_items.forEach((nav) => {
@@ -76,6 +78,26 @@ const checkLayout = () => {
   }
 };
 
+// Check Language Function
+// We Check if The Current Page is Compatible With
+//Lang to Stop The Exucution if Redirect To The Other Page
+function checkLang() {
+  if (
+    localStorage.getItem("lang") === "EN" &&
+    window.location.href !== "http://127.0.0.1:5500/index.html"
+  ) {
+    window.location.href = "http://127.0.0.1:5500/index.html";
+  }
+  if (
+    localStorage.getItem("lang") === "AR" &&
+    window.location.href !== "http://127.0.0.1:5500/index-rtl.html"
+  ) {
+    window.location.href = "http://127.0.0.1:5500/index-rtl.html";
+  }
+}
+
+checkLang();
+
 // Check Mode Function
 const checkMode = () => {
   if (localStorage.getItem("mode") === "dark") {
@@ -101,11 +123,17 @@ show_navBar.addEventListener("click", () => {
 });
 
 // Showing The Inroduction text
-const text = [
+const text_en = [
   "Freelance IT Developer ",
   "Website Creation",
   "Web Design, Graphic Design",
 ];
+const text_ar = [
+  "مبرمج ويب مستقل",
+  "إنشاء صفحات الويب",
+  "تصميم المواقع ، تصميم الجرافيك",
+];
+
 const colors = ["#3DB2FF", "#FF2442", "#FFB830"];
 const typingDelay = 100;
 const erasingDelay = 50;
@@ -113,6 +141,7 @@ const newTextDelay = 1500;
 let textIndex = 0;
 let charIndex = 0;
 let colorIndex = 0;
+const text = localStorage.getItem("lang") === "EN" ? text_en : text_ar;
 
 const type = () => {
   if (charIndex < text[textIndex].length) {
@@ -139,6 +168,7 @@ const erase = () => {
     setTimeout(type, typingDelay);
   }
 };
+
 document.addEventListener("DOMContentLoaded", () => {
   type();
   // Show Cookies
@@ -147,6 +177,19 @@ document.addEventListener("DOMContentLoaded", () => {
       cookies_container.classList.add("showCookies");
     }, 2000);
   }
+
+  // Changing Select Language
+  if (localStorage.getItem("lang") !== null) {
+    localStorage.getItem("lang") === "EN"
+      ? (select_language.value = "EN")
+      : (select_language.value = "AR");
+  }
+
+  // Remove PreLoad
+  let timeWait = setTimeout(() => {
+    pre_load.style.opacity = "0";
+    pre_load.style.display = "none";
+  }, 4000);
 });
 
 document.addEventListener("scroll", () => {
@@ -240,20 +283,15 @@ window.addEventListener("scroll", () => {
     }
   } else {
     // Make The NavBar In Mobile Have Color and Fixed
-    if (window.scrollY >= 180) {
-      nav_mobile.style.position = "fixed";
-      nav_mobile.style.top = "0";
+    if (window.scrollY >= window.innerHeight - nav_mobile.offsetHeight) {
       nav_mobile.style.backgroundColor = getComputedStyle(
         document.documentElement
       ).getPropertyValue("--main-color");
     } else {
-      nav_mobile.style.position = "absolute";
-      nav_mobile.style.top = "150px";
       nav_mobile.style.backgroundColor = "transparent";
     }
   }
 });
-
 // Save Starting Theme Color in LocalStorage
 if (localStorage.getItem("text-hover-color") === null) {
   let startColor = getComputedStyle(document.documentElement).getPropertyValue(
@@ -278,6 +316,11 @@ if (localStorage.getItem("mode") === null) {
   localStorage.setItem("mode", "light");
 } else {
   checkMode();
+}
+
+// Save Language in LocalStorage
+if (localStorage.getItem("lang") === null) {
+  localStorage.setItem("lang", "EN");
 }
 
 // Changing Theme Color
@@ -313,6 +356,16 @@ mode_buttons.forEach((mode) => {
     }
     checkMode();
   });
+});
+
+// Changing Language
+select_language.addEventListener("change", () => {
+  if (select_language.value === "AR") {
+    localStorage.setItem("lang", "AR");
+  } else {
+    localStorage.setItem("lang", "EN");
+  }
+  checkLang();
 });
 
 // Accepting Cookies
