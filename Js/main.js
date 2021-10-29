@@ -84,15 +84,15 @@ const checkLayout = () => {
 function checkLang() {
   if (
     localStorage.getItem("lang") === "EN" &&
-    window.location.pathname !== "/index.html"
+    window.location.pathname !== "Portfolio/index.html"
   ) {
-    window.location.pathname = "/index.html";
+    window.location.pathname = "Portfolio/index.html";
   }
   if (
     localStorage.getItem("lang") === "AR" &&
-    window.location.pathname !== "/index-rtl.html"
+    window.location.pathname !== "Portfolio/index-rtl.html"
   ) {
-    window.location.pathname = "/index-rtl.html";
+    window.location.pathname = "Portfolio/index-rtl.html";
   }
 }
 
