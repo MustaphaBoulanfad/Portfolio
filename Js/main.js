@@ -84,15 +84,15 @@ const checkLayout = () => {
 function checkLang() {
   if (
     localStorage.getItem("lang") === "EN" &&
-    window.location.href !== "http://127.0.0.1:5500/index.html"
+    window.location.pathname !== "/index.html"
   ) {
-    window.location.href = "http://127.0.0.1:5500/index.html";
+    window.location.pathname = "/index.html";
   }
   if (
     localStorage.getItem("lang") === "AR" &&
-    window.location.href !== "http://127.0.0.1:5500/index-rtl.html"
+    window.location.pathname !== "/index-rtl.html"
   ) {
-    window.location.href = "http://127.0.0.1:5500/index-rtl.html";
+    window.location.pathname = "/index-rtl.html";
   }
 }
 
