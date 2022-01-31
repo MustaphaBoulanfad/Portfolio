@@ -210,7 +210,7 @@ document.addEventListener("scroll", () => {
     for (let i = 1; i <= break_container.length; i++) {
       break_container[
         i - 1
-      ].style.backgroundImage = `url("../Images/break-0${i}.jpg")`;
+      ].style.backgroundImage = `url("Images/break-0${i}.jpg")`;
       break_container[i - 1].style.backgroundSize = "cover";
       break_container[i - 1].style.backgroundPosition = "center";
     }
