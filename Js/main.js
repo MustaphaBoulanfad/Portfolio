@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let timeWait = setTimeout(() => {
     pre_load.style.opacity = "0";
     pre_load.style.display = "none";
-  }, 4000);
+  }, 2000);
 });
 
 document.addEventListener("scroll", () => {
