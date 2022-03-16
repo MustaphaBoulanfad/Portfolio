@@ -17,7 +17,8 @@ let show_navBar = document.querySelector(".show-navBar"),
   navbar_items = Array.from(document.querySelectorAll("nav a")),
   mode_buttons = Array.from(document.querySelectorAll(".mode")),
   select_language = document.querySelector(".language"),
-  pre_load = document.querySelector(".pre-load");
+  pre_load = document.querySelector(".pre-load"),
+  projects = document.querySelectorAll(".project");
 
 // Scroll To section from NavBar
 navbar_items.forEach((nav) => {
@@ -378,3 +379,5 @@ cookies_container.querySelector("button").addEventListener("click", () => {
 cookies_container.querySelector("i").addEventListener("click", () => {
   cookies_container.classList.remove("showCookies");
 });
+
+//UPDATE 15/03/2021
